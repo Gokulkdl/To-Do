@@ -57,13 +57,13 @@ const Todo = () => {
         console.log("user idddddd", userid)
         try {
             // const token = localStorage.getItem("token");
-            await axios.post(
-                `http://localhost:8000/api/addNewToDo/${userid}`,
-                newTodo,
-                { headers: {
-                    "Content-Type": "application/json", },
-                }
-            );
+        await axios.post(
+            `http://localhost:8000/api/addNewToDo/${userid}`,
+             newTodo,
+            { headers: {
+                "Content-Type": "application/json", },
+            }
+        );
 
             setNewTodo({
                 task: "",
