@@ -3,7 +3,7 @@ import { registerUser,loginUser } from '../controllers/userController.js';
 // import { createTodo, fecthToDo, deleteToDo, updateToDoStatus } from '../controllers/todoController.js';
 import * as todoController from '../controllers/todoController.js';
 
-import { auth } from '../auth/authenticationMiddleware.js';
+// import { auth } from '../auth/authenticationMiddleware.js';
 
 const router = express.Router();
 
