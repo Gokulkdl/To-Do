@@ -9,30 +9,21 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const navigate = useNavigate();
-
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async e => {
     e.preventDefault();
-
     try {
       const res = await axios.post('http://localhost:8000/api/login', formData);
-
       toast.success(res.data.message);
-
       console.log(res.data)
-
       //storing token local storage
     localStorage.setItem("token",res.data.token)
     localStorage.setItem("user",res.data.user.id)
-
-
       navigate('/todo'); 
     } catch (err) {
      toast.error(err.response?.data?.message || 'Login failed');
-
     }
   };
 
@@ -40,6 +31,8 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4">
         <ToastContainer/>
       <div className="w-full max-w-md">
+             <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-200">To-Do App</h1>
+
         <form
           onSubmit={handleSubmit}
           className="bg-gray-800 bg-opacity-90 p-8 rounded-2xl shadow-2xl backdrop-blur-md"

@@ -35,6 +35,7 @@ const Signup = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white px-4">
       <ToastContainer />
   <div className="w-full max-w-md">
+     <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-200">To-Do App</h1>
     <form
       onSubmit={handleSubmit}
       className="bg-gray-800 bg-opacity-90 p-8 rounded-2xl shadow-2xl backdrop-blur-md"
