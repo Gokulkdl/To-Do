@@ -21,7 +21,7 @@ const todoSchema = new mongoose.Schema({
     },
     time:{
         type:String,
-        required:false
+        required:true
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,

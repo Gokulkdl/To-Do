@@ -105,6 +105,18 @@ const Todo = () => {
     };
 
 
+//  am and pm
+const formatTimeTo12Hour = (time24) => {
+  if (!time24) return "";
+  const [hour, minute] = time24.split(":");
+  const h = parseInt(hour, 10);
+  const ampm = h >= 12 ? "PM" : "AM";
+  const hour12 = h % 12 === 0 ? 12 : h % 12;
+  return `${hour12}:${minute} ${ampm}`;
+};
+
+
+
     // filter and search
     const [statusFilter, setStatusFilter] = useState("All");
     const [searchQuery, setSearchQuery] = useState("");
@@ -301,7 +313,8 @@ const Todo = () => {
                                                 </h3>
                                                 <div className="flex flex-wrap items-center gap-3 mt-1 text-sm text-gray-400">
                                                     <span className="flex items-center">
-                                                        <FaClock className="mr-1" /> {item.time}
+                                                        <FaClock className="mr-1" />
+                                                        {formatTimeTo12Hour(item.time)}
                                                     </span>
                                                     <span className="flex items-center">
                                                         <FaCalendarAlt className="mr-1" />
