@@ -35,7 +35,7 @@ Authentication Features
 
 Task Management Features
 
-- **Create Task – Add a new task with name, priority, time, and final date
+- Create Task – Add a new task with name, priority, time, and final date
 - Edit Task – Update task details
 - Delete Task – Remove tasks from your list
 - Toggle Complete – Mark tasks as complete or incomplete
