@@ -77,5 +77,3 @@ Challenges Faced
 
 
 During development, I encountered frequent power outages and internet disruptions due to heavy rainfall in my area. Since I was working on a system without a power back up, these issues in battery backup. The lack of stable network connectivity further impacted my ability to test and sync code effectively.
-
-As a result, the total time to complete the project extended slightly. However, the actual time spent on coding and implementation was around 8-10 hours. The additional time was due to power and network issues, not development complexity.
